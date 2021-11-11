@@ -231,4 +231,10 @@ st.subheader('Bronnenlijst')
 st.text('''https://www.kaggle.com/cityapiio/world-cities-average-internet-prices-2010-2020
 https://www.kaggle.com/sansuthi/gapminder-internet
 https://www.kaggle.com/i2i2i2/cities-of-the-world
-https://www.kaggle.com''')
+https://www.kaggle.com
+https://pandas.pydata.org/docs/
+https://plotly.com/python/plotly-fundamentals/
+https://protonmail.com/support/knowledge-base/saving-a-file-in-utf-8-format/
+https://docs.streamlit.io/library/api-reference/charts/st.map
+https://docs.streamlit.io/library/get-started
+https://stackoverflow.com/questions/65104927/add-text-to-folium-map-using-an-absolute-position''')
