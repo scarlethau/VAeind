@@ -6,13 +6,18 @@
 # In[42]:
 
 
+import streamlit as st
+import folium
+import geopandas as gpd
 import pandas as pd
-import numpy as np
-import matplotlib.pyplot as plt
+from streamlit_folium import folium_static
 import plotly.express as px
 import plotly.graph_objects as go
-get_ipython().system('pip install folium')
-import folium
+import numpy as np
+import requests
+import json
+import plotly.figure_factory as ff
+import statsmodels.api as sm
 
 
 # In[2]:
@@ -250,6 +255,7 @@ fig.update_layout({
 fig.update_layout(height=1000, width=1000, title ='Internet prices')
 fig.show()
 
+st.plotly_chart(fig)
 
 # In[29]:
 
@@ -291,7 +297,7 @@ fig.update_layout(xaxis_title='BNP per hoofd [USD]',
 fig.data[1].visible=False
 fig.show()   
 
-
+st.plotly_chart(fig)
 # In[32]:
 
 
@@ -309,7 +315,7 @@ fig.update_layout(xaxis_title='BNP per hoofd [USD]',
                   title = 'Verband tussen inkomen en prijs')
                 
 fig.show()
-
+st.plotly_chart(fig)
 
 # In[33]:
 
@@ -331,7 +337,7 @@ fig.update_layout(xaxis_title='Internet gebruikers per 100 inwoners',
                 
 fig.show()
 
-
+st.plotly_chart(fig)
 # In[34]:
 
 
@@ -350,7 +356,7 @@ fig.update_layout(xaxis_title='Internet gebruikers per 100 inwoners',
                 
 fig.show()
 
-
+st.plotly_chart(fig)
 # In[35]:
 
 
@@ -515,4 +521,5 @@ for row in internet_city2.iterrows():
 
 
 m
+
 
