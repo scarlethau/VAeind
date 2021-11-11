@@ -5,17 +5,18 @@
 
 # In[42]:
 
-
+import streamlit as st
+import folium
+import geopandas as gpd
 import pandas as pd
-import numpy as np
-import matplotlib.pyplot as plt
+from streamlit_folium import folium_static
 import plotly.express as px
 import plotly.graph_objects as go
-get_ipython().system('pip install folium')
-import folium
-
-
-# In[2]:
+import numpy as np
+import requests
+import json
+import plotly.figure_factory as ff
+import statsmodels.api as sm
 
 
 #https://www.kaggle.com/cityapiio/world-cities-average-internet-prices-2010-2020
@@ -33,21 +34,21 @@ city = pd.read_csv('cities15000.csv')
 # In[3]:
 
 
-internet.head()
+#internet.head()
 #per maand, per prijs, per land
 
 
 # In[4]:
 
 
-internet.info()
+#internet.info()
 
 
 # In[5]:
 
 
 # zoeken naar kolommen met missing values
-internet.isna().sum().loc[lambda x:x > 0]
+#internet.isna().sum().loc[lambda x:x > 0]
 
 
 # In[6]:
@@ -60,21 +61,21 @@ internet.isna().sum().loc[lambda x:x > 0]
 
 
 # Zoeken naar duplicates in kolom 'City'
-internet.value_counts('City').loc[lambda s:s > 1].sort_values()
+#internet.value_counts('City').loc[lambda s:s > 1].sort_values()
 
 
 # In[8]:
 
 
 # duplicate citys beter bekijken
-print(internet.loc[internet.City == "London",["City","Region","Country"]])
+#print(internet.loc[internet.City == "London",["City","Region","Country"]])
 #Alles mag blijven, geen duplicates gevonden
 
 
 # In[9]:
 
 
-internet['Country'].nunique()
+#internet['Country'].nunique()
 
 
 # ### gap dataset
@@ -82,26 +83,26 @@ internet['Country'].nunique()
 # In[10]:
 
 
-gap.head()
+#gap.head()
 
 
 # In[11]:
 
 
-gap.info()
+#gap.info()
 
 
 # In[12]:
 
 
-gap.isna().sum().loc[lambda x:x > 0]
+#gap.isna().sum().loc[lambda x:x > 0]
 #word later d.m.v. een merge gefilterd
 
 
 # In[13]:
 
 
-gap['incomeperperson'].describe()
+#gap['incomeperperson'].describe()
 
 
 # ### City dataset
@@ -109,13 +110,13 @@ gap['incomeperperson'].describe()
 # In[14]:
 
 
-city.head()
+#city.head()
 
 
 # In[15]:
 
 
-city.info()
+#city.info()
 
 
 # In[16]:
@@ -151,7 +152,7 @@ internet = internet.rename(columns={"Internet Price, 2010": "2010",
                                     "Internet Price, 2018": "2018", 
                                     "Internet Price, 2019": "2019",
                                     "Internet Price, 2020": "2020"})
-internet.head(1)
+#internet.head(1)
 
 
 # In[19]:
@@ -165,22 +166,23 @@ internet_long.head()
 # In[20]:
 
 
-fig, ax = plt.subplots()
-ax.boxplot([internet_long["Price"]])
+#fig, ax = plt.subplots()
+#ax.boxplot([internet_long["Price"]])
 #ax.set_xticklabels(["Pijs])
-ax.set_ylabel("Internet prijs")
-ax.set_title("Verdeling van internetprijs")
-plt.show()
+#ax.set_ylabel("Internet prijs")
+#ax.set_title("Verdeling van internetprijs")
+#plt.show()
 
+#st.plotly_chart(fig)
 
 # In[21]:
 
 
-internet_long['Price'].hist()
-plt.title('Internet prijzen')
-plt.xlabel('Internet prijs')
-plt.ylabel('Frequentie')
-plt.show()
+#internet_long['Price'].hist()
+#plt.title('Internet prijzen')
+#plt.xlabel('Internet prijs')
+#plt.ylabel('Frequentie')
+#plt.show()
 
 
 # In[22]:
@@ -193,29 +195,29 @@ internet_long2 = internet_long1[internet_long1['Price'] < 150]
 # In[23]:
 
 
-fig, ax = plt.subplots()
-ax.boxplot([gap["incomeperperson"]])
+#fig, ax = plt.subplots()
+#ax.boxplot([gap["incomeperperson"]])
 #ax.set_xticklabels(["Pijs])
-ax.set_ylabel("Internet prijs")
-ax.set_title("Verdeling van internetprijs")
-plt.show()
+#ax.set_ylabel("Internet prijs")
+#ax.set_title("Verdeling van internetprijs")
+#plt.show()
 
 
 # In[24]:
 
 
-gap['incomeperperson'].hist()
-plt.title('Internet prijzen')
-plt.xlabel('Internet prijs')
-plt.ylabel('Frequentie')
-plt.show()
+#gap['incomeperperson'].hist()
+#plt.title('Internet prijzen')
+#plt.xlabel('Internet prijs')
+#plt.ylabel('Frequentie')
+#plt.show()
 
 
 # In[25]:
 
 
-print(internet_long2.shape)
-internet_long2.sort_values('Price', ascending = False).head(30)
+#print(internet_long2.shape)
+#internet_long2.sort_values('Price', ascending = False).head(30)
 
 
 # In[26]:
@@ -250,6 +252,7 @@ fig.update_layout({
 fig.update_layout(height=1000, width=1000, title ='Internet prices')
 fig.show()
 
+st.plotly_chart(fig)
 
 # In[29]:
 
@@ -290,7 +293,7 @@ fig.update_layout(xaxis_title='BNP per hoofd [USD]',
                   title = 'Verband tussen inkomen en prijs')
 fig.data[1].visible=False
 fig.show()   
-
+st.plotly_chart(fig)
 
 # In[32]:
 
@@ -309,7 +312,7 @@ fig.update_layout(xaxis_title='BNP per hoofd [USD]',
                   title = 'Verband tussen inkomen en prijs')
                 
 fig.show()
-
+st.plotly_chart(fig)
 
 # In[33]:
 
@@ -331,7 +334,7 @@ fig.update_layout(xaxis_title='Internet gebruikers per 100 inwoners',
                 
 fig.show()
 
-
+st.plotly_chart(fig)
 # In[34]:
 
 
@@ -350,7 +353,7 @@ fig.update_layout(xaxis_title='Internet gebruikers per 100 inwoners',
                 
 fig.show()
 
-
+st.plotly_chart(fig)
 # In[35]:
 
 
