@@ -25,7 +25,7 @@ internet = pd.read_csv('cities_internet_prices_historical.24-10-2021.csv')
 #https://www.kaggle.com/sansuthi/gapminder-internet
 gap = pd.read_csv('gapminder_internet.csv')
 
-fig, ax = plt.subplots()
+fig = plt.subplots()
 ax.boxplot([internet_long["Price"]])
 #ax.set_xticklabels(["Pijs])
 ax.set_ylabel("Internet prijs")
