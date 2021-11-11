@@ -182,9 +182,9 @@ fig = px.scatter(data_frame=internet_gap,
                 title='Relation between income and internet use rate'
                 )
 
-fig.update_layout(xaxis_title='Internet gebruikers per 100 inwoners',
+fig.update_layout(xaxis_title='Internet gebruik per 100 inwoners',
                   yaxis_title="Prijs [USD]",
-                  title = 'Internet gebruiker per 100 inwoners en prijs')
+                  title = 'Internet gebruik per 100 inwoners en prijs')
                 
 fig.show()
 st.plotly_chart(fig)
@@ -202,7 +202,7 @@ fig = px.scatter(data_frame=internet_gap,
                 title='Relation between income and internet use rate'
                 )
 
-fig.update_layout(xaxis_title='Internet gebruikers per 100 inwoners',
+fig.update_layout(xaxis_title='Internet gebruik per 100 inwoners',
                   yaxis_title="BNP per hoofd [USD]",
                   title = 'Verband tussen internetgebruik en inkomen')
                 
