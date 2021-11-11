@@ -43,6 +43,8 @@ fig.update_layout({
 fig.update_layout(height=1000, width=1000, title ='Internet prices')
 fig.show()
 
+internet_gap=internet_long2.merge(gap, left_on='Country', right_on='country', how='inner')
+
 fig = px.scatter(data_frame=internet_gap,
                 x='incomeperperson',
                 y='Price',
