@@ -154,7 +154,6 @@ fig.update_layout(xaxis_title='Internet gebruikers per 100 inwoners',
 fig.show()
 st.plotly_chart(fig)
 
-
 fig = px.scatter(data_frame=internet_gap,
                 x='internetuserate',
                 y='incomeperperson',
