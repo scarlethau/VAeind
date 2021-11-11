@@ -24,7 +24,7 @@ internet = pd.read_csv('cities_internet_prices_historical.24-10-2021.csv')
  #https://www.kaggle.com/sansuthi/gapminder-internet
 gap = pd.read_csv('gapminder_internet.csv')
 #https://www.kaggle.com/i2i2i2/cities-of-the-world
-city = pd.read_csv('cities15000.csv')
+city = pd.read_csv("cities15000.csv)
 
 internet = internet.rename(columns={"Internet Price, 2010": "2010", 
                                     "Internet Price, 2011": "2011",
@@ -162,11 +162,4 @@ fig.update_layout(xaxis_title='Internet gebruikers per 100 inwoners',
                 
 fig.show()
 st.plotly_chart(fig)
-
-internet_wide = internet_long2.pivot(index=['City', 'Region', 'Country'], columns='Year', values='Price')
-internet_wide.reset_index(level=0, inplace=True)
-
-internet_city= internet_wide.merge(city, left_on='City', right_on='asciiname', how='inner')
-
-
 
