@@ -91,7 +91,7 @@ de correlatie is tussen verschillende variabelen en de gemiddelde
 internetprijzen in verschillende landen zijn tussen 2010 en 2020.''')
 st.header('Internet prijzen')
 st.subheader('Histogram en boxplot van de prijzen per jaar')
-st.text('''In
+st.text('''In''')
 
 
 fig = px.histogram(internet_long2, x="Year",y='Price', color='Year')
