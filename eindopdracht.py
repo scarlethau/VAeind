@@ -152,7 +152,8 @@ st.plotly_chart(fig)
 
 
 st.header('Verband tussen het internet gebruik per 100 inwoners en BNP per hoofd')
-st.text('''Hieronder hebben we de bovenstaande plot nader bekeken, uitvergroot en een trendlijn toegevoegd.''')
+st.text('''Hieronder hebben we de bovenstaande plot nader bekeken, uitvergroot en 
+een trendlijn toegevoegd.''')
 
 fig = px.scatter(data_frame=internet_gap,
                 x='incomeperperson',
@@ -174,7 +175,8 @@ st.plotly_chart(fig)
 st.header('Verband tussen de prijs en het internetgebruik per 100 inwoners ')
 st.text('''
 Op de y-as staat wederom de gemiddelde internetprijs per maand te zien. 
-Op de x-as zien we het aantal mensen dat met het internet verbonden is per 100 inwoners per land.
+Op de x-as zien we het aantal mensen dat met het internet verbonden is per 100 
+inwoners per land.
 ''')
 
 fig = px.scatter(data_frame=internet_gap,
