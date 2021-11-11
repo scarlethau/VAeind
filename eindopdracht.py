@@ -167,7 +167,7 @@ fig.show()
 st.plotly_chart(fig)
 
 
-st.header('Verband tussen het inkomen en het internetgebruik per 100 inwoners ')
+st.header('Verband tussen de prijs en het internetgebruik per 100 inwoners ')
 st.text('''?????
 ''')
 
