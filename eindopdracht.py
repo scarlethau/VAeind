@@ -384,14 +384,14 @@ def add_categorical_legend(folium_map, title, colors, labels):
 #m = folium.Map()
 
 #m = add_categorical_legend(m, 'prijsverschil',
-                           colors = ["lightblue"],
-                           labels = ['Verschil'])
+                   #        colors = ["lightblue"],
+                 #          labels = ['Verschil'])
 
 #for row in internet_nieuw.iterrows():
   #  row_values = row[1]
    # location = [row_values['Latitude'], row_values['Longitude']]
    # marker = folium.Marker(location = location,
-                         popup = row_values['Verschil'])
+         #                popup = row_values['Verschil'])
    # marker.add_to(m)
 
 
