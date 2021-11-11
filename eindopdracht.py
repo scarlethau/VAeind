@@ -113,13 +113,15 @@ namelijk die over de internetprijzen. De nieuwe dataset laat onder andere
 het gemiddelde inkomen per persoon per jaar zien. We zijn hierop gekomen,
 omdat we een correlatie tussen het gemiddelde inkomen per persoon en de 
 gemiddelde internetprijs wilden maken. Op de x-as van dit figuur is het 
-gemiddelde inkomen per persoon per jaar te zien. Op de y-as is de 
-gemiddelde internetprijs per maand per jaar te zien. Ondanks, dat dit
-niet de meest overzichtelijke scatterplot is, kunnen we dankzij de 
-trendlijn wel een correlatie eruit halen. Hoe hoger het inkomen is, 
-hoe hoger de internetprijs. Over het algemeen gezien dan. Zo heb je bij 
-het gemiddelde inkomen tussen de 20.000 en 40.000 dollar alsnog mensen
-die het duurste internetpakket hebben. De correlatie zegt dus niet alles.''') 
+gemiddelde inkomen per persoon per land te zien. Op de y-as is de 
+gemiddelde internetprijs per maand te zien. Alle verticale strepen staan 
+voor een land. Ondanks, dat dit niet de meest overzichtelijke scatterplot 
+is, kunnen we dankzij de trendlijn wel een correlatie eruit halen. 
+Hoe hoger het inkomen is, hoe hoger de internetprijs. Over het algemeen
+gezien dan. Zo heb je bij het gemiddelde inkomen tussen de 20.000 en 
+40.000 dollar alsnog mensendie het duurste internetpakket hebben. 
+De correlatie zegt dus niet alles.
+''') 
 
 
 fig = go.Figure()
@@ -149,7 +151,8 @@ fig.show()
 st.plotly_chart(fig)
 
 
-
+st.header('Verband tussen het internet gebruik per 100 inwoners en BNP per hoofd')
+st.text('''Hieronder hebben we de bovenstaande plot nader bekeken, uitvergroot en een trendlijn toegevoegd.''')
 
 fig = px.scatter(data_frame=internet_gap,
                 x='incomeperperson',
@@ -169,7 +172,9 @@ st.plotly_chart(fig)
 
 
 st.header('Verband tussen de prijs en het internetgebruik per 100 inwoners ')
-st.text('''?????
+st.text('''
+Op de y-as staat wederom de gemiddelde internetprijs per maand te zien. 
+Op de x-as zien we het aantal mensen dat met het internet verbonden is per 100 inwoners per land.
 ''')
 
 fig = px.scatter(data_frame=internet_gap,
@@ -219,6 +224,7 @@ fig.update_layout(xaxis_title='Internet gebruik per 100 inwoners',
 fig.show()
 st.plotly_chart(fig)
 
+st.subheader('Bronnenlijst')
 st.text('''https://www.kaggle.com/cityapiio/world-cities-average-internet-prices-2010-2020
 https://www.kaggle.com/sansuthi/gapminder-internet
 https://www.kaggle.com/i2i2i2/cities-of-the-world
