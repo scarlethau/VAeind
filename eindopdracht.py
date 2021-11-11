@@ -167,8 +167,7 @@ fig.show()
 st.plotly_chart(fig)
 
 
-st.header('Verband tussen het internet gebruik per 100 inwoners 
-          en BNP per hoofd ')
+st.header('Verband tussen het internet gebruik per 100 inwoners en BNP per hoofd ')
 st.text('''In de eerste scatterplot is met behulp van de trendlijn 
 de relatie tussen het inkomen en het internetgebruik te zien. De 
 trendlijn loopt in een lineaire lijn steil omhoog en dit geeft aan, 
