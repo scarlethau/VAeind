@@ -11,6 +11,7 @@ import requests
 import json
 import plotly.figure_factory as ff
 import statsmodels.api as sm
+import matplotlib.pyplot as plt
 
 st.title("Dashboard over elektrische auto's en laadpalen")
 st.text('''Welkom op ons dashboard! Op ons dashboard is te zien hoe een gemiddelde bezetting 
