@@ -61,6 +61,7 @@ internet = pd.read_csv('cities_internet_prices_historical.24-10-2021.csv')
  #https://www.kaggle.com/sansuthi/gapminder-internet
 gap = pd.read_csv('gapminder_internet.csv')
 #https://www.kaggle.com/i2i2i2/cities-of-the-world
+city = pd.read_csv('cities15000.csv')
 
 internet = internet.rename(columns={"Internet Price, 2010": "2010", 
                                     "Internet Price, 2011": "2011",
