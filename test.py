@@ -25,7 +25,7 @@ st.text('''hallo''')
 internet = pd.read_csv('cities_internet_prices_historical.24-10-2021.csv')
 #https://www.kaggle.com/sansuthi/gapminder-internet
 gap = pd.read_csv('gapminder_internet.csv')
-
+internet_long=internet.melt(id_vars = ['City', 'Region', 'Country'], var_name = "Year", value_name = "Price")
 internet_long1 = internet_long[internet_long['Price'] > 0]
 internet_long2 = internet_long1[internet_long1['Price'] < 150]
 
