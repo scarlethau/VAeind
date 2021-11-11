@@ -44,8 +44,3 @@ fig.update_layout({
 fig.update_layout(height=1000, width=1000, title ='Internet prices')
 fig.show()
 
-internet_long['Price'].hist()
-plt.title('Internet prijzen')
-plt.xlabel('Internet prijs')
-plt.ylabel('Frequentie')
-plt.show()
