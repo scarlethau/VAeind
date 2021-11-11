@@ -140,9 +140,7 @@ fig.update_layout({
       'buttons': my_buttons}]})    
 fig.update_layout(xaxis_title='BNP per hoofd [USD]',
                   yaxis_title="Prijs [USD]",
-                  title = 'Verband tussen inkomen en prijs'
-                   height=600,
-                width=1000, )
+                  title = 'Verband tussen inkomen en prijs' )
 fig.data[1].visible=False
 fig.show()   
 
