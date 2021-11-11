@@ -112,20 +112,23 @@ st.plotly_chart(fig)
 
 
 
-
-fig = px.scatter(data_frame=gap,
+fig = px.scatter(data_frame=internet_gap,
                 x='incomeperperson',
-                y='internetuserate',
-                #color='Year',
-                trendline='ols',
-                #labels={'ChargeTime':'Oplaad tijd [h]', 'TotalEnergy':'Totaal verbruikte energie [Wh]'}, 
+                y='Price',
+                #color='Country',
+                trendline='ols', 
                 height=600,
                 width=1000, 
-                title='Relation between income and internet use rate'
                 )
 
+fig.update_layout(xaxis_title='BNP per hoofd [USD]',
+                  yaxis_title="Prijs [USD]",
+                  title = 'Verband tussen inkomen en prijs')
+                
 fig.show()
+st.plotly_chart(fig)
 
+#tothier
 
 fig = px.scatter(data_frame=internet_gap,
                 x='internetuserate',
