@@ -176,7 +176,8 @@ st.header('Verband tussen de prijs en het internetgebruik per 100 inwoners ')
 st.text('''
 Op de y-as staat wederom de gemiddelde internetprijs per maand te zien. 
 Op de x-as zien we het aantal mensen dat met het internet verbonden is per 100 
-inwoners per land.
+inwoners per land. We zien dat op plekken waar er meer mensen op het internet
+aangesloten zitten dat de internetprijs hoger ligt. 
 ''')
 
 fig = px.scatter(data_frame=internet_gap,
