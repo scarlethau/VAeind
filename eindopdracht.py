@@ -145,3 +145,20 @@ fig.update_layout(xaxis_title='Internet gebruikers per 100 inwoners',
                 
 fig.show()
 st.plotly_chart(fig)
+
+
+fig = px.scatter(data_frame=internet_gap,
+                x='internetuserate',
+                y='incomeperperson',
+                trendline='ols', 
+                height=600,
+                width=1000, 
+                title='Relation between income and internet use rate'
+                )
+
+fig.update_layout(xaxis_title='Internet gebruikers per 100 inwoners',
+                  yaxis_title="BNP per hoofd [USD]",
+                  title = 'Verband tussen internetgebruik en inkomen')
+                
+fig.show()
+st.plotly_chart(fig)
