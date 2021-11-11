@@ -85,6 +85,13 @@ internet_long2 = internet_long1[internet_long1['Price'] < 150]
 
 internet_long2.sort_values('Price', ascending = False).head(30)
 
+st.title("Internetprijzen in verschillende landen tussen 2010 en 2020")
+st.text('''Welkom op ons dashboard! Op ons dashboard is te zien wat 
+de correlatie is tussen verschillende variabelen en de gemiddelde
+internetprijzen in verschillende landen zijn tussen 2010 en 2020.''')
+st.header('Internet prijzen')
+st.subheader('Histogram en boxplot van de prijzen per jaar')
+st.text('''In
 
 
 fig = px.histogram(internet_long2, x="Year",y='Price', color='Year')
