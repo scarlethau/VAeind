@@ -42,3 +42,16 @@ fig.update_layout({
 
 fig.update_layout(height=1000, width=1000, title ='Internet prices')
 fig.show()
+
+fig = px.scatter(data_frame=internet_gap,
+                x='incomeperperson',
+                y='Price',
+                #color='Year',
+                trendline='ols',
+                #labels={'ChargeTime':'Oplaad tijd [h]', 'TotalEnergy':'Totaal verbruikte energie [Wh]'}, 
+                height=600,
+                width=1000, 
+                title='Relation between price and income'
+                )
+                
+fig.show()
