@@ -167,8 +167,18 @@ fig.show()
 st.plotly_chart(fig)
 
 
-st.header('Verband tussen het inkomen en de prijzen per BNP per hoofd ')
-st.text('''In''')
+st.header('Verband tussen het internet gebruik per 100 inwoners 
+          en BNP per hoofd ')
+st.text('''In de eerste scatterplot is met behulp van de trendlijn 
+de relatie tussen het inkomen en het internetgebruik te zien. De 
+trendlijn loopt in een lineaire lijn steil omhoog en dit geeft aan, 
+dat de relatie tussen deze twee variabelen sterk is. Op de x-as is 
+het inkomen per persoon per jaar te zien. Op de y-as is het 
+gemiddelde internetgebruik per persoon per jaar te zien. In het
+figuur is ook goed af te lezen, dat bij een hogere inkomen het 
+gemiddelde internetgebruik ook toeneemt. De ‘’scatters’’ uit de s
+catterplot zijn een stuk hoger geplaatst. De trend is er dus wel 
+egelijk.''')
 
 
 fig = px.scatter(data_frame=internet_gap,
