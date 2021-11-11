@@ -128,12 +128,10 @@ fig.update_layout(xaxis_title='BNP per hoofd [USD]',
 fig.show()
 st.plotly_chart(fig)
 
-#tothier
-
 fig = px.scatter(data_frame=internet_gap,
                 x='internetuserate',
                 y='Price',
-                color='Country',
+                #color='Country',
                 trendline='ols',
                 #labels={'ChargeTime':'Oplaad tijd [h]', 'TotalEnergy':'Totaal verbruikte energie [Wh]'}, 
                 height=600,
@@ -141,5 +139,9 @@ fig = px.scatter(data_frame=internet_gap,
                 title='Relation between income and internet use rate'
                 )
 
+fig.update_layout(xaxis_title='Internet gebruikers per 100 inwoners',
+                  yaxis_title="Prijs [USD]",
+                  title = 'Internet gebruikers per 100 inwoners en prijs')
+                
 fig.show()
-
+st.plotly_chart(fig)
