@@ -177,7 +177,7 @@ gemiddelde internetgebruik per persoon per jaar te zien. In het
 figuur is ook goed af te lezen, dat bij een hogere inkomen het 
 gemiddelde internetgebruik ook toeneemt. De ‘’scatters’’ uit de s
 catterplot zijn een stuk hoger geplaatst. De trend is er dus wel 
-egelijk.''')
+degelijk.''')
 
 
 fig = px.scatter(data_frame=internet_gap,
@@ -198,8 +198,25 @@ fig.update_layout(xaxis_title='Internet gebruik per 100 inwoners',
 fig.show()
 st.plotly_chart(fig)
 
-st.header('Verband tussen het inkomen en de prijzen per BNP per hoofd ')
-st.text('''In''')
+st.header('Verband tussen het inkomen en het internetgebruik per 100 inwoners')
+st.text('''In het tweede figuur, ook een scatterplot, hebben 
+we gekozen voor andere variabelen op de x-as en y-as. Hier
+hebben we op de x-as het gemiddelde internetgebruik per persoon
+per jaar gezet en op de y-as de gemiddelde internetprijs per
+maand per jaar neergezet. Rechts naast de figuur is de legenda 
+te zien. Deze legenda laat per land een andere kleur zijn.
+Dit zorgt voor onderscheid tussen de landen. Op het eerste oog 
+is dit figuur niet heel makkelijk af te lezen. Ga je echter over
+de punten heen, dan krijg je het land, het internetgebruik en
+de prijs te zien. Wat valt hierbij op? De linkerkant van het
+figuur, de landen met het laagste internetgebruik, zijn 3e 
+wereldlanden. De meest welvarende landen, dus aan de rechterkant 
+van de x-as, zijn een paar van de meest welvarende landen. 
+Hieruit kunnen we opmaken, dat hoe welvarender een land is, hoe 
+hoger het internetgebruik is. Ook ligt de prijs over het 
+algemeen een stuk hoger in de welvarende landen.
+ 
+''')
 
 
 fig = px.scatter(data_frame=internet_gap,
