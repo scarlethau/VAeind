@@ -19,8 +19,9 @@ import plotly.figure_factory as ff
 import statsmodels.api as sm
 
 st.title("Internetprijzen in verschillende landen tussen 2010 en 2020")
-st.text('''Welkom op ons dashboard! Op ons dashboard is te zien wat de internetprijzen 
-in verschillende landen zijn tussen 2010 en 2020.''')
+st.text('''Welkom op ons dashboard! Op ons dashboard is te zien wat 
+de correlatie is tussen verschillende variabelen en de gemiddelde
+internetprijzen in verschillende landen zijn tussen 2010 en 2020.''')
 st.header('Internet prijzen')
 st.subheader('Histogram en boxplot van de prijzen per jaar')
 st.text('''In dit figuur is een histogram te zien. In het andere figuur is een boxplot 
