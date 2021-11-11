@@ -18,6 +18,16 @@ import json
 import plotly.figure_factory as ff
 import statsmodels.api as sm
 
+st.title("Dashboard over elektrische auto's en laadpalen")
+st.text('''Welkom op ons dashboard! Op ons dashboard is te zien hoe een gemiddelde bezetting 
+van een laadpaal eruit ziet. Daarnaast zijn er nog veel meer interessante dingen
+over laadpalen en elektrische voertuigen.''')
+st.header('Laadpaaldata')
+st.subheader('Histogram van de laadtijd')
+st.text('''Hier zie je een aantal observaties op de y-as en de tijd in uren op de x-as van de 
+verbonden tijd. Hierbij zie je dat de meeste observaties onder de 5 uur zitten, dus 
+een verbonden tijd van minder dan 5 uur hebben. Dit klopt, want het gemiddelde van 
+de verbonden s''')
 
  #https://www.kaggle.com/cityapiio/world-cities-average-internet-prices-2010-2020
 internet = pd.read_csv('cities_internet_prices_historical.24-10-2021.csv')
