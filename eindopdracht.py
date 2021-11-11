@@ -41,7 +41,7 @@ internet.head()
 # In[4]:
 
 
-internet.info()
+#internet.info()
 
 
 # In[5]:
@@ -75,7 +75,7 @@ print(internet.loc[internet.City == "London",["City","Region","Country"]])
 # In[9]:
 
 
-internet['Country'].nunique()
+#internet['Country'].nunique()
 
 
 # ### gap dataset
@@ -83,19 +83,19 @@ internet['Country'].nunique()
 # In[10]:
 
 
-gap.head()
+#gap.head()
 
 
 # In[11]:
 
 
-gap.info()
+#gap.info()
 
 
 # In[12]:
 
 
-gap.isna().sum().loc[lambda x:x > 0]
+#gap.isna().sum().loc[lambda x:x > 0]
 #word later d.m.v. een merge gefilterd
 
 
@@ -111,7 +111,7 @@ internet = internet.rename(columns={"Internet Price, 2010": "2010",
                                     "Internet Price, 2011": "2011",
                                     "Internet Price, 2012": "2012", 
                                     "Internet Price, 2013": "2013"})
-internet.head(1)
+#internet.head(1)
 # In[14]:
 
 
@@ -123,22 +123,22 @@ internet_long.head()
 # In[15]:
 
 
-fig, ax = plt.subplots()
-ax.boxplot([internet_long["Price"]])
+#fig, ax = plt.subplots()
+#ax.boxplot([internet_long["Price"]])
 #ax.set_xticklabels(["Pijs])
-ax.set_ylabel("Internet prijs")
-ax.set_title("Verdeling van internetprijs")
-plt.show()
+#ax.set_ylabel("Internet prijs")
+#ax.set_title("Verdeling van internetprijs")
+#plt.show()
 
 
 # In[16]:
 
 
-internet_long['Price'].hist()
-plt.title('Internet prijzen')
-plt.xlabel('Internet prijs')
-plt.ylabel('Frequentie')
-plt.show()
+#internet_long['Price'].hist()
+#plt.title('Internet prijzen')
+#plt.xlabel('Internet prijs')
+#plt.ylabel('Frequentie')
+#plt.show()
 
 
 # In[17]:
@@ -151,34 +151,34 @@ internet_long2 = internet_long1[internet_long1['Price'] < 150]
 # In[31]:
 
 
-gap.head()
+#gap.head()
 
 
 # In[39]:
 
 
-fig, ax = plt.subplots()
-ax.boxplot([gap["incomeperperson"]])
+#fig, ax = plt.subplots()
+#ax.boxplot([gap["incomeperperson"]])
 #ax.set_xticklabels(["Pijs])
-ax.set_ylabel("Internet prijs")
-ax.set_title("Verdeling van internetprijs")
-plt.show()
+#ax.set_ylabel("Internet prijs")
+#ax.set_title("Verdeling van internetprijs")
+#plt.show()
 
 
 # In[19]:
 
 
-gap['incomeperperson'].hist()
-plt.title('Internet prijzen')
-plt.xlabel('Internet prijs')
-plt.ylabel('Frequentie')
-plt.show()
+#gap['incomeperperson'].hist()
+#plt.title('Internet prijzen')
+#plt.xlabel('Internet prijs')
+#plt.ylabel('Frequentie')
+#plt.show()
 
 
 # In[20]:
 
 
-print(internet_long2.shape)
+#print(internet_long2.shape)
 internet_long2.sort_values('Price', ascending = False).head(30)
 
 
@@ -187,7 +187,7 @@ internet_long2.sort_values('Price', ascending = False).head(30)
 # In[21]:
 
 
-internet_long2['Year'].value_counts()
+#internet_long2['Year'].value_counts()
 
 
 # In[22]:
@@ -381,19 +381,19 @@ def add_categorical_legend(folium_map, title, colors, labels):
 # In[41]:
 
 
-m = folium.Map()
+#m = folium.Map()
 
-m = add_categorical_legend(m, 'prijsverschil',
+#m = add_categorical_legend(m, 'prijsverschil',
                            colors = ["lightblue"],
                            labels = ['Verschil'])
 
-for row in internet_nieuw.iterrows():
-    row_values = row[1]
-    location = [row_values['Latitude'], row_values['Longitude']]
-    marker = folium.Marker(location = location,
+#for row in internet_nieuw.iterrows():
+  #  row_values = row[1]
+   # location = [row_values['Latitude'], row_values['Longitude']]
+   # marker = folium.Marker(location = location,
                          popup = row_values['Verschil'])
-    marker.add_to(m)
+   # marker.add_to(m)
 
 
-m
+#m
 
