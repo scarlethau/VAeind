@@ -162,3 +162,11 @@ fig.update_layout(xaxis_title='Internet gebruikers per 100 inwoners',
                 
 fig.show()
 st.plotly_chart(fig)
+
+internet_wide = internet_long2.pivot(index=['City', 'Region', 'Country'], columns='Year', values='Price')
+internet_wide.reset_index(level=0, inplace=True)
+
+internet_city= internet_wide.merge(city, left_on='City', right_on='asciiname', how='inner')
+
+
+
