@@ -118,7 +118,7 @@ niet de meest overzichtelijke scatterplot is, kunnen we dankzij de
 trendlijn wel een correlatie eruit halen. Hoe hoger het inkomen is, 
 hoe hoger de internetprijs. Over het algemeen gezien dan. Zo heb je bij 
 het gemiddelde inkomen tussen de 20.000 en 40.000 dollar alsnog mensen
-die het duurste internetpakket hebben. De correlatie zegt dus niet alles. 
+die het duurste internetpakket hebben. De correlatie zegt dus niet alles.''') 
 
 
 fig = go.Figure()
