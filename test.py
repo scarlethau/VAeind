@@ -26,6 +26,9 @@ internet = pd.read_csv('cities_internet_prices_historical.24-10-2021.csv')
 #https://www.kaggle.com/sansuthi/gapminder-internet
 gap = pd.read_csv('gapminder_internet.csv')
 
+internet_long1 = internet_long[internet_long['Price'] > 0]
+internet_long2 = internet_long1[internet_long1['Price'] < 150]
+
 fig = px.histogram(internet_long2, x="Year",y='Price', color='Year')
 
 my_buttons = [{'label': "Histogram", 'method': "update", 'args': [{"type": 'histogram'}]},
