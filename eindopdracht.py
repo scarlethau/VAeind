@@ -17,6 +17,7 @@ import requests
 import json
 import plotly.figure_factory as ff
 import statsmodels.api as sm
+import matplotlib.pyplot as plt
 
 st.title("Internetprijzen in verschillende landen tussen 2010 en 2020")
 st.text('''Welkom op ons dashboard! Op ons dashboard is te zien wat 
