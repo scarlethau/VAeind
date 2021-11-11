@@ -231,7 +231,7 @@ internet_long2.isna().sum()
 # In[27]:
 
 
-internet_long2['Year'].value_counts()
+#internet_long2['Year'].value_counts()
 
 
 # In[28]:
@@ -258,14 +258,14 @@ st.plotly_chart(fig)
 
 
 internet_gap=internet_long2.merge(gap, left_on='Country', right_on='country', how='inner')
-print(internet_gap.shape)
-internet_gap.head()
+#print(internet_gap.shape)
+#internet_gap.head()
 
 
 # In[30]:
 
 
-internet_gap["incomeperperson"].nunique()
+#internet_gap["incomeperperson"].nunique()
 
 
 # In[31]:
@@ -360,7 +360,7 @@ st.plotly_chart(fig)
 # Omzetten naar wide format
 internet_wide = internet_long2.pivot(index=['City', 'Region', 'Country'], columns='Year', values='Price')
 internet_wide.reset_index(level=0, inplace=True)
-internet_wide.head()
+#internet_wide.head()
 
 
 # In[36]:
@@ -368,24 +368,24 @@ internet_wide.head()
 
 #Merge voor coordinaten per stad
 internet_city= internet_wide.merge(city, left_on='City', right_on='asciiname', how='inner')
-print(internet_city.shape)
-internet_city.head()
+#print(internet_city.shape)
+#internet_city.head()
 
 
 # In[37]:
 
 
 internet_city2=internet_city.dropna(subset= ['latitude' , 'longitude', '2010', '2020'])
-print(internet_city2.shape)
-internet_city2.head()
+#print(internet_city2.shape)
+#internet_city2.head()
 
 
 # In[38]:
 
 
 internet_city2['Verschil'] = internet_city2["2020"] - internet_city2["2010"]
-print(internet_city2.shape)
-internet_city2.head(1)
+#print(internet_city2.shape)
+#internet_city2.head(1)
 
 
 # In[44]:
