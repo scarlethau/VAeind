@@ -24,11 +24,11 @@ in verschillende landen zijn tussen 2010 en 2020.''')
 st.header('Internet prijzen')
 st.subheader('Histogram en boxplot van de prijzen per jaar')
 st.text('''In dit figuur is een histogram te zien. In het andere figuur is een boxplot 
-te zien. Met behulp van het dropdown menu is het mogelijk om makkelijk tussen de twee 
-figuren te switchen. De staven van het histogram en de verschillende boxplots zijn van 
-simpel van elkaar te onderscheiden door de diverse kleuren, die gebruikt zijn. Voor beide 
-figuren is gebruik gemaakt van de dataset met gemiddelde internetprijzen per maand per 
-jaar. In deze dataset gaat het om een bereik van heel veel landen, verspreid over de 
+te zien. Met behulp van het dropdown menu is het mogelijk om makkelijk tussen 
+de twee figuren te switchen. De staven van het histogram en de verschillende 
+boxplots zijn van simpel van elkaar te onderscheiden door de diverse kleuren, 
+die gebruikt zijn. Voor beide figuren is gebruik gemaakt van de dataset met
+gemiddelde internetprijzen per maand per jaar. In deze dataset gaat het om een bereik van heel veel landen, verspreid over de 
 hele wereld. De dataset moest eerst opgeschoond worden, hierbij hebben we de outliers 
 verwijderd en alleen maar naar relevante waarden gekeken.
 In het eerste figuur, namelijk de histogram, zijn op de x-as de jaren van 2010 t/m 2020 
