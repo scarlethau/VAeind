@@ -67,29 +67,6 @@ fig.show()
 st.plotly_chart(fig)
 internet_gap=internet_long2.merge(gap, left_on='Country', right_on='country', how='inner')
 
-fig = go.Figure()
-for col in ['incomeperperson', 'internetuserate']:
-    fig.add_trace(go.Scatter(x=internet_gap[col], y=internet_gap['Price'], mode='markers'))
-
-my_buttons = [{'label': 'Income - Price', 'method': 'update',
-    'args': [{'visible': [True, False]},
-            {'title': 'Verband tussen inkomen en prijs'}]},
-    {'label': 'Usage - Price', 'method': 'update',
-    'args': [{'visible': [False, True]},
-            {'title': 'Verband tussen internet gebruik en prijs'}]}]
-
-fig.update_layout({
-    'updatemenus': [{
-      'type':'buttons','direction': 'down',
-      'x': 1.3,'y': 0.5,
-      'showactive': True, 'active': 0,
-      'buttons': my_buttons}]})    
-fig.update_layout(xaxis_title='BNP per hoofd [USD]',
-                  yaxis_title="Prijs [USD]",
-                  title = 'Verband tussen inkomen en prijs')
-fig.data[1].visible=False
-fig.show()   
-st.plotly_chart(fig)
 
 fig = go.Figure()
 for col in ['incomeperperson', 'internetuserate']:
