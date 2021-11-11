@@ -18,16 +18,14 @@ import json
 import plotly.figure_factory as ff
 import statsmodels.api as sm
 
-st.title("Dashboard over elektrische auto's en laadpalen")
-st.text('''Welkom op ons dashboard! Op ons dashboard is te zien hoe een gemiddelde bezetting 
-van een laadpaal eruit ziet. Daarnaast zijn er nog veel meer interessante dingen
-over laadpalen en elektrische voertuigen.''')
-st.header('Laadpaaldata')
-st.subheader('Histogram van de laadtijd')
-st.text('''Hier zie je een aantal observaties op de y-as en de tijd in uren op de x-as van de 
-verbonden tijd. Hierbij zie je dat de meeste observaties onder de 5 uur zitten, dus 
-een verbonden tijd van minder dan 5 uur hebben. Dit klopt, want het gemiddelde van 
-de verbonden s''')
+st.title("Internetprijzen in verschillende landen tussen 2010 en 2020")
+st.text('''Welkom op ons dashboard! Op ons dashboard is te zien wat de internetprijzen in verschillende landen zijn tussen 2010 en 2020.''')
+st.header('Internet prijzen')
+st.subheader('Histogram en boxplot van de prijzen per jaar')
+st.text('''In dit figuur is een histogram te zien. In het andere figuur is een boxplot te zien. Met behulp van het dropdown menu is het mogelijk om makkelijk tussen de twee figuren te switchen. De staven van het histogram en de verschillende boxplots zijn van simpel van elkaar te onderscheiden door de diverse kleuren, die gebruikt zijn. Voor beide figuren is gebruik gemaakt van de dataset met gemiddelde internetprijzen per maand per jaar. In deze dataset gaat het om een bereik van heel veel landen, verspreid over de hele wereld. De dataset moest eerst opgeschoond worden, hierbij hebben we de outliers verwijderd en alleen maar naar relevante waarden gekeken.
+In het eerste figuur, namelijk de histogram, zijn op de x-as de jaren van 2010 t/m 2020 te zien. Elk jaar heeft een eigen staaf om goed het onderscheid te maken. De y-as geeft de som van de internetprijzen weer. Het valt hierbij op, dat de staven vanaf 2015 aanzienlijk groter zijn, dan van de jaren ervoor. Zo is de staaf van 2018 bijna zeven keer zo groot als de staaf van 2010. Waar het in 2010 ging om een som van 3.500 dollar, gaat het in 2018 om een som van meer dan 24.000 dollar. Waar ligt dit dan aan? Zijn ze internetprijzen zo erg gestegen? Dit enorme verschil komt door het aantal metingen. In de latere jaren zijn simpelweg meer metingen gedaan. Uit deze histogram kunnen we dus geen conclusies trekken. Om een conclusie te kunnen trekken, zouden we de waarden moeten delen door het aantal metingen en dit gemiddelde vergelijken met alle jaren.
+In het tweede figuur (te selecteren met de dropdown menu) is de boxplot te zien. Op de x-as zijn de jaren van 2010 t/m 2020 weer af te lezen. Elk jaar heeft een eigen boxplot. Op de y-as is de gemiddelde internetprijs per maand per jaar te zien. Hierbij is te zien, dat de gemiddelde internetprijs door de jaren heen eigenlijk niet echt is gestegen of gedaald. De mediaan van de boxplots komen namelijk overeen met elkaar. Wel is de spreiding gestegen door de jaren heen. Dit geeft aan, dat er aanbieders zijn met hogere en iets lagere internetprijzen. Het maximum is dus gestegen.
+''')
 
  #https://www.kaggle.com/cityapiio/world-cities-average-internet-prices-2010-2020
 internet = pd.read_csv('cities_internet_prices_historical.24-10-2021.csv')
