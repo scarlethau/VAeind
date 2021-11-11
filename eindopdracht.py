@@ -70,7 +70,7 @@ fig.update_layout({
       'buttons': my_buttons}]})
 
 fig.update_layout(height=1000, width=1000, title ='Internet prices')
-fig.show()
+
 
 st.plotly_chart(fig)
 
@@ -99,7 +99,6 @@ fig.update_layout(xaxis_title='BNP per hoofd [USD]',
                   yaxis_title="Prijs [USD]",
                   title = 'Verband tussen inkomen en prijs')
 fig.data[1].visible=False
-fig.show()   
 
 st.plotly_chart(fig)
 
@@ -116,8 +115,7 @@ fig = px.scatter(data_frame=internet_gap,
 fig.update_layout(xaxis_title='BNP per hoofd [USD]',
                   yaxis_title="Prijs [USD]",
                   title = 'Verband tussen inkomen en prijs')
-                
-fig.show()
+ 
 st.plotly_chart(fig)
 
 
@@ -136,8 +134,6 @@ fig = px.scatter(data_frame=internet_gap,
 fig.update_layout(xaxis_title='Internet gebruikers per 100 inwoners',
                   yaxis_title="Prijs [USD]",
                   title = 'Internet gebruikers per 100 inwoners en prijs')
-                
-fig.show()
 
 st.plotly_chart(fig)
 
@@ -154,8 +150,7 @@ fig = px.scatter(data_frame=internet_gap,
 fig.update_layout(xaxis_title='Internet gebruikers per 100 inwoners',
                   yaxis_title="BNP per hoofd [USD]",
                   title = 'Verband tussen internetgebruik en inkomen')
-                
-fig.show()
+
 
 st.plotly_chart(fig)
 
