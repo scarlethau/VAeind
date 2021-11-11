@@ -47,6 +47,7 @@ internet = internet.rename(columns={"Internet Price, 2010": "2010",
                                     "Internet Price, 2017": "2017",
                                     "Internet Price, 2018": "2018", 
                                     "Internet Price, 2019": "2019",
+                                    "Internet Price, 2020": "2020"})
 
 internet_long=internet.melt(id_vars = ['City', 'Region', 'Country'], var_name = "Year", value_name = "Price")
 
