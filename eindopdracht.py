@@ -105,7 +105,7 @@ fig.show()
 st.plotly_chart(fig)
 internet_gap=internet_long2.merge(gap, left_on='Country', right_on='country', how='inner')
 
-st.header('Verband tussen het inkomen en de prijzen per BNP per hoofd ')
+st.header('Verband tussen het inkomen en de prijzen en BNP per hoofd ')
 st.text('''In het onderstaande figuur is een scatterplot te zien. Deze 
 scatterplot is tot stand gekomen door een nieuwe dataset in ons bestand
 toe te voegen en deze te mergen (samenvoegen) met onze andere dataset,
@@ -219,3 +219,7 @@ fig.update_layout(xaxis_title='Internet gebruik per 100 inwoners',
 fig.show()
 st.plotly_chart(fig)
 
+st.text('''https://www.kaggle.com/cityapiio/world-cities-average-internet-prices-2010-2020
+https://www.kaggle.com/sansuthi/gapminder-internet
+https://www.kaggle.com/i2i2i2/cities-of-the-world
+https://www.kaggle.com''')
