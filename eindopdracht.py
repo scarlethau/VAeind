@@ -29,6 +29,7 @@ city = pd.read_csv('cities15000.csv')
 city.drop(city.iloc[:, 6:20], inplace = True, axis = 1)
 city.drop(city.columns[[0,1,3]], axis = 1, inplace = True)
 
+
 internet = internet.rename(columns={"Internet Price, 2010": "2010", 
                                     "Internet Price, 2011": "2011",
                                     "Internet Price, 2012": "2012", 
