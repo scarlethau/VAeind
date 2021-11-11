@@ -11,3 +11,4 @@ scipy==1.7.1
 shapely==1.7.1
 Rtree==0.9.7
 statsmodels==0.12.2
+matplotlib==3.3.4
