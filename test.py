@@ -30,7 +30,6 @@ internet_long1 = internet_long[internet_long['Price'] > 0]
 internet_long2 = internet_long1[internet_long1['Price'] < 150]
 
 fig = px.histogram(internet_long2, x="Year",y='Price', color='Year')
-
 my_buttons = [{'label': "Histogram", 'method': "update", 'args': [{"type": 'histogram'}]},
   {'label': "Boxplot", 'method': "update", 'args': [{"type": 'box', 'mode': 'markers'}]}]
 
@@ -43,4 +42,3 @@ fig.update_layout({
 
 fig.update_layout(height=1000, width=1000, title ='Internet prices')
 fig.show()
-
