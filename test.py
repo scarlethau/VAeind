@@ -11,7 +11,7 @@ import requests
 import json
 import plotly.figure_factory as ff
 import statsmodels.api as sm
-import matplotlib.pyplot as plt
+
 
 st.title("Dashboard over elektrische auto's en laadpalen")
 st.text('''Welkom op ons dashboard! Op ons dashboard is te zien hoe een gemiddelde bezetting 
@@ -26,12 +26,20 @@ internet = pd.read_csv('cities_internet_prices_historical.24-10-2021.csv')
 #https://www.kaggle.com/sansuthi/gapminder-internet
 gap = pd.read_csv('gapminder_internet.csv')
 
-fig = plt.subplots()
-ax.boxplot([internet_long["Price"]])
-#ax.set_xticklabels(["Pijs])
-ax.set_ylabel("Internet prijs")
-ax.set_title("Verdeling van internetprijs")
-plt.show()
+fig = px.histogram(internet_long2, x="Year",y='Price', color='Year')
+
+my_buttons = [{'label': "Histogram", 'method': "update", 'args': [{"type": 'histogram'}]},
+  {'label': "Boxplot", 'method': "update", 'args': [{"type": 'box', 'mode': 'markers'}]}]
+
+fig.update_layout({
+    'updatemenus': [{
+      'type':'buttons','direction': 'down',
+      'x': 1.15,'y': 0.5,
+      'showactive': True, 'active': 0,
+      'buttons': my_buttons}]})
+
+fig.update_layout(height=1000, width=1000, title ='Internet prices')
+fig.show()
 
 internet_long['Price'].hist()
 plt.title('Internet prijzen')
