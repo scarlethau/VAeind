@@ -44,13 +44,15 @@ door het aantal metingen.
 In de latere jaren zijn simpelweg meer metingen gedaan. Uit deze histogram 
 kunnen we dus geen conclusies trekken. Om een conclusie te kunnen trekken, 
 zouden we de waarden moeten delen door het aantal metingen en dit gemiddelde 
-vergelijken met alle jaren.In het tweede figuur (te selecteren met de dropdown menu) is de boxplot te zien. 
-Op de x-as zijn de jaren van 2010 t/m 2020 weer af te lezen. Elk jaar heeft een 
-eigen boxplot. Op de y-as is de gemiddelde internetprijs per maand per jaar te zien. 
-Hierbij is te zien, dat de gemiddelde internetprijs door de jaren heen eigenlijk 
-niet echt is gestegen of gedaald. De mediaan van de boxplots komen namelijk overeen 
-met elkaar. Wel is de spreiding gestegen door de jaren heen. Dit geeft aan, dat er 
-aanbieders zijn met hogere en iets lagere internetprijzen. Het maximum is dus gestegen.
+vergelijken met alle jaren.In het tweede figuur (te selecteren met de dropdown)
+is de boxplot te zien. Op de x-as zijn de jaren van 2010 t/m 2020 weer af te
+lezen. Elk jaar heeft een eigen boxplot. Op de y-as is de gemiddelde 
+internetprijs per maand per jaar te zien. Hierbij is te zien, dat de 
+gemiddelde internetprijs door de jaren heen eigenlijk niet echt is gestegen
+of gedaald. De mediaan van de boxplots komen namelijk overeen met elkaar.
+Wel is de spreiding gestegen door de jaren heen. Dit geeft aan, dat er 
+aanbieders zijn met hogere en iets lagere internetprijzen.
+Het maximum is dus gestegen.
 ''')
 
  #https://www.kaggle.com/cityapiio/world-cities-average-internet-prices-2010-2020
