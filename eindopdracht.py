@@ -104,14 +104,21 @@ fig.show()
 st.plotly_chart(fig)
 internet_gap=internet_long2.merge(gap, left_on='Country', right_on='country', how='inner')
 
-st.title("Internetprijzen in verschillende landen tussen 2010 en 2020")
-st.text('''Welkom op ons dashboard! Op ons dashboard is te zien wat 
-de correlatie is tussen verschillende variabelen en de gemiddelde
-internetprijzen in verschillende landen zijn tussen 2010 en 2020.''')
-st.header('Internet prijzen')
-st.subheader('Histogram en boxplot van de prijzen per jaar')
-st.text('''In''')
-
+st.header('Verband tussen het inkomen en de prijzen per BNP per hoofd ')
+st.text('''In het onderstaande figuur is een scatterplot te zien. Deze 
+scatterplot is tot stand gekomen door een nieuwe dataset in ons bestand
+toe te voegen en deze te mergen (samenvoegen) met onze andere dataset,
+namelijk die over de internetprijzen. De nieuwe dataset laat onder andere
+het gemiddelde inkomen per persoon per jaar zien. We zijn hierop gekomen,
+omdat we een correlatie tussen het gemiddelde inkomen per persoon en de 
+gemiddelde internetprijs wilden maken. Op de x-as van dit figuur is het 
+gemiddelde inkomen per persoon per jaar te zien. Op de y-as is de 
+gemiddelde internetprijs per maand per jaar te zien. Ondanks, dat dit
+niet de meest overzichtelijke scatterplot is, kunnen we dankzij de 
+trendlijn wel een correlatie eruit halen. Hoe hoger het inkomen is, 
+hoe hoger de internetprijs. Over het algemeen gezien dan. Zo heb je bij 
+het gemiddelde inkomen tussen de 20.000 en 40.000 dollar alsnog mensen
+die het duurste internetpakket hebben. De correlatie zegt dus niet alles. 
 
 
 fig = go.Figure()
@@ -140,7 +147,8 @@ fig.show()
 
 st.plotly_chart(fig)
 
-
+st.header('Verband tussen het inkomen en de prijzen per BNP per hoofd ')
+st.text('''In''')
 
 
 fig = px.scatter(data_frame=internet_gap,
@@ -159,6 +167,11 @@ fig.update_layout(xaxis_title='BNP per hoofd [USD]',
 fig.show()
 st.plotly_chart(fig)
 
+
+st.header('Verband tussen het inkomen en de prijzen per BNP per hoofd ')
+st.text('''In''')
+
+
 fig = px.scatter(data_frame=internet_gap,
                 x='internetuserate',
                 y='Price',
@@ -176,6 +189,10 @@ fig.update_layout(xaxis_title='Internet gebruikers per 100 inwoners',
                 
 fig.show()
 st.plotly_chart(fig)
+
+st.header('Verband tussen het inkomen en de prijzen per BNP per hoofd ')
+st.text('''In''')
+
 
 fig = px.scatter(data_frame=internet_gap,
                 x='internetuserate',
