@@ -23,8 +23,23 @@ import statsmodels.api as sm
 internet = pd.read_csv('cities_internet_prices_historical.24-10-2021.csv')
  #https://www.kaggle.com/sansuthi/gapminder-internet
 gap = pd.read_csv('gapminder_internet.csv')
+#https://www.kaggle.com/i2i2i2/cities-of-the-world
+city = pd.read_csv('cities15000.csv')
 
+city.drop(city.iloc[:, 6:20], inplace = True, axis = 1)
+city.drop(city.columns[[0,1,3]], axis = 1, inplace = True)
 
+internet = internet.rename(columns={"Internet Price, 2010": "2010", 
+                                    "Internet Price, 2011": "2011",
+                                    "Internet Price, 2012": "2012", 
+                                    "Internet Price, 2013": "2013",
+                                    "Internet Price, 2014": "2014", 
+                                    "Internet Price, 2015": "2015",
+                                    "Internet Price, 2016": "2016", 
+                                    "Internet Price, 2017": "2017",
+                                    "Internet Price, 2018": "2018", 
+                                    "Internet Price, 2019": "2019",
+                                    "Internet Price, 2020": "2020"})
 
 internet_long=internet.melt(id_vars = ['City', 'Region', 'Country'], var_name = "Year", value_name = "Price")
 internet_long.head()
