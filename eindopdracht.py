@@ -238,6 +238,18 @@ staat er het verschil van de prijs. Dit verschil is berekend door de prijs
 van 2010 van 2020 af te trekken. 
 ''')
 
+st.text('''   
+
+
+
+
+
+    
+    
+    
+         
+          
+''')
 
 
 st.subheader('Bronnenlijst')
