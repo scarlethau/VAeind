@@ -230,6 +230,16 @@ fig.update_layout(xaxis_title='Internet gebruik per 100 inwoners',
 fig.show()
 st.plotly_chart(fig)
 
+
+st.header('Verschil tussen internetprijzen per land ')
+st.text('''Op de map is het verschil tussen de internetprijzen tussen de 
+periode 2010 en 2020 te zien per land. Als je op een land op de kaart klikt,
+staat er het verschil van de prijs. Dit verschil is berekend door de prijs
+van 2010 van 2020 af te trekken. 
+''')
+
+
+
 st.subheader('Bronnenlijst')
 st.text('''https://www.kaggle.com/cityapiio/world-cities-average-internet-prices-2010-2020
 https://www.kaggle.com/sansuthi/gapminder-internet
